@@ -1,0 +1,41 @@
+@use "global" as *;
+
+footer {
+    background-color: $color-green;
+    color: $color-black;
+    font-family: $font-family-Kodchasan-Light;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 20px 0;
+        margin: 0 40px;
+
+        @include respond-to-medium {
+            align-items: center;
+            text-align: center;
+        }
+
+        @include respond-to-small {
+            align-items: center;
+            text-align: center;
+        }
+
+        h5 {
+            @include respond-to-medium {
+                font-size: 14px;
+            }
+
+            @include respond-to-small {
+                font-size: 6px;
+            }
+        }
+
+        div {
+            @include respond-to-small {
+                margin-top: 8px;
+            }
+        }
+    }
+}

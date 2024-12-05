@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Jersey10;
+    src: url(font/Jersey10-Regular.ttf);
+}
+
+@font-face {
+    font-family: Kodchasan-Light;
+    src: url(font/Kodchasan-Light.ttf);
+}
+
+@font-face {
+    font-family: Kodchasan-Regular;
+    src: url(font/Kodchasan-Regular.ttf);
+}
+
+$color-green: #A9D5B8;
+$color-black: #090909;
+$color-white: #FFFFFF;
+
+$font-family-Jersey: Jersey10;
+$font-family-Kodchasan-Light: Kodchasan-Light;
+$font-family-Kodchasan-Regular: Kodchasan-Regular;

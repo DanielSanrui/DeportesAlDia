@@ -1,0 +1,73 @@
+@use "global" as *;
+
+header {
+    background-color: $color-green;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        @include respond-to-medium {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include respond-to-small {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            @include respond-to-small {
+                margin-bottom: 10px;
+            }
+        }
+
+        .btn-verde {
+            background-color: $color-green;
+            color: $color-white;
+            font-family: $font-family-Jersey;
+            border: none;
+            font-size: 34px;
+
+            @include respond-to-medium {
+                font-size: 22px;
+                margin: 5px;
+                padding: 8px 15px;
+            }
+
+            @include respond-to-small {
+                font-size: 22px;
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
+
+        .btn-blanco {
+            background-color: $color-white;
+            color: $color-green;
+            font-family: $font-family-Jersey;
+            border: none;
+            font-size: 28px;
+            padding: 14px 20px;
+
+            @include respond-to-medium {
+                font-size: 22px;
+                margin: 5px;
+                padding: 8px 15px;
+            }
+
+            @include respond-to-small {
+                font-size: 22px;
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+        }
+
+    }
+}

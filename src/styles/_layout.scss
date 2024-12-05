@@ -1,0 +1,235 @@
+@use "global" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-green;
+}
+
+main {
+    background-color: $color-white;
+
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+
+        @include respond-to-medium {
+            width: 90%;
+            padding: 15px;
+        }
+
+        @include respond-to-small {
+            width: 90%;
+            padding: 10px;
+        }
+
+        h1 {
+            font-family: $font-family-Jersey;
+            color: $color-green;
+            margin-bottom: 20px;
+            font-size: 48px;
+
+            @include respond-to-medium {
+                font-size: 36px;
+            }
+
+            @include respond-to-small {
+                font-size: 38px;
+                text-align: center;
+            }
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            column-gap: 140px;
+            row-gap: 40px;
+            justify-content: center;
+
+            @include respond-to-medium {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+            }
+
+            @include respond-to-small {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        .card {
+            width: 400px;
+            background-color: $color-green;
+            overflow: hidden;
+
+            @include respond-to-medium {
+                width: 100%;
+            }
+
+            @include respond-to-small {
+                width: 100%;
+            }
+
+            .card-image {
+                padding: 12px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 40px;
+                color: $color-white;
+                margin-bottom: 4px;
+                text-align: center;
+                padding: 2px;
+                font-family: $font-family-Jersey;
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #8B8B8B;
+                    left: 0;
+                }
+
+                &::before {
+                    top: -10px;
+                }
+
+                &::after {
+                    bottom: -10px;
+                }
+
+                @include respond-to-medium {
+                    font-size: 38px;
+                }
+
+                @include respond-to-small {
+                    font-size: 30px;
+                }
+            }
+
+            .card-description {
+                font-size: 16px;
+                color: $color-white;
+                line-height: 1.5;
+                text-align: justify;
+                font-family: $font-family-Kodchasan-Regular;
+                padding: 8px;
+
+                @include respond-to-medium {
+                    font-size: 18px;
+                }
+
+                @include respond-to-small {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.main-form {
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh;
+}
+
+.form-container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+
+    h1 {
+        font-size: 60px;
+        color: $color-green;
+        margin-bottom: 0.5rem;
+        font-family: $font-family-Jersey;
+        font-weight: lighter;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        font-family: $font-family-Kodchasan-Regular;
+        color: $color-green;
+
+        a {
+            color: $color-green;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            text-align: left;
+            font-size: 0.9rem;
+            margin: 0.5rem 0 0.2rem;
+            color: $color-green;
+            font-family: $font-family-Kodchasan-Light;
+        }
+
+        input {
+            padding: 0.8rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #8B8B8B;
+            border-radius: 4px;
+            background-color: #F4F4F4;
+
+            &::placeholder {
+                color: $color-green;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            color: $color-green;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-family: $font-family-Kodchasan-Light;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        button {
+            padding: 0.8rem;
+            font-size: 1rem;
+            background-color: $color-green;
+            color: $color-white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
